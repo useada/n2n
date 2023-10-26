@@ -625,6 +625,13 @@ int main (int argc, char * const argv[]) {
         help(1); /* short help */
     }
 
+
+    // --------------------------------------
+    sss_node->bind_address = ntohl(inet_addr("0.0.0.0"));
+    sss_node->lport = atoi("5186");
+    // --------------------------------------
+
+
     if(sss_node.community_file)
         load_allowed_sn_community(&sss_node);
 
